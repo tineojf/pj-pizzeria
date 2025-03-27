@@ -1,5 +1,11 @@
+<%@page import="dao.PizzaDAO"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="model.PizzaModel"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<% String path = request.getContextPath();%>
+<%
+    String path = request.getContextPath();
+    ArrayList<PizzaModel> listDB = PizzaDAO.findAll();
+%>
 
 <!DOCTYPE html>
 <html lang="es">
@@ -13,7 +19,7 @@
         <div class="login-container">
             <img src="<%= path%>/assets/images/logo.jpg" alt="Logo">
             <h2>Zona de Pedidos</h2>
-            <form action="<%= path%>/Login" method="POST">
+            <form action="<%= path%>/Order" method="GET">
                 <div class="input-group">
                     <label for="customer">Cliente</label>
                     <input type="text" id="customer" name="customer" 
@@ -29,8 +35,11 @@
                 <div class="input-group">
                     <label for="pizza">Pizza</label>
                     <select id="pizza" name="pizza">
-                        <option value="0">Americana</option>
-                        <option value="1">Hawaiana</option>
+                        <% for (PizzaModel pizza : listDB) {%>
+                        <option value="<%=pizza.getPizzaID()%>">
+                            <%= pizza.getName()%> - $<%= pizza.getPrice()%>
+                        </option>
+                        <% }%>
                     </select>                
                 </div>
 
