@@ -1,24 +1,25 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<% String path = request.getContextPath();%>
 <!DOCTYPE html>
 <html lang="es">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Inicio de Sesión</title>
-        <link rel="stylesheet" href="<%= request.getContextPath()%>/assets/css/login.css">
+        <link rel="stylesheet" href="<%= path%>/assets/css/login.css">
     </head>
     <body>
         <div class="login-container">
-            <img src="<%= request.getContextPath()%>/assets/images/logo.jpg" alt="Logo">
+            <img src="<%= path%>/assets/images/logo.jpg" alt="Logo">
             <h2>Iniciar Sesión</h2>
-            <form>
+            <form action="<%= path%>/Login" method="POST">
                 <div class="input-group">
-                    <label for="email">Correo Electrónico</label>
-                    <input type="email" id="email" placeholder="Ingresa tu correo" required>
+                    <label for="username">Usuario</label>
+                    <input type="username" name="username" placeholder="Ingresa tu usuario" required>
                 </div>
                 <div class="input-group">
                     <label for="password">Contraseña</label>
-                    <input type="password" id="password" placeholder="Ingresa tu contraseña" required>
+                    <input type="password" name="password" placeholder="Ingresa tu contraseña" required>
                 </div>
                 <button type="submit" class="login-btn">Ingresar</button>
             </form>

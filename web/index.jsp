@@ -1,4 +1,5 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%String path = request.getContextPath();%>
 <!DOCTYPE html>
 <html lang="es">
     <head>
@@ -8,5 +9,6 @@
     </head>
     <body>
         <div>Home</div>
+        <a href="<%=path%>/login/login.jsp">Login</a>
     </body>
 </html>
