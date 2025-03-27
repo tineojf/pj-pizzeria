@@ -1,5 +1,6 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <% String path = request.getContextPath();%>
+
 <!DOCTYPE html>
 <html lang="es">
     <head>
@@ -15,12 +16,14 @@
             <form action="<%= path%>/Login" method="POST">
                 <div class="input-group">
                     <label for="username">Usuario</label>
-                    <input type="username" name="username" placeholder="Ingresa tu usuario" required>
+                    <input type="text" name="username" placeholder="Ingresa tu usuario" required>
                 </div>
+
                 <div class="input-group">
                     <label for="password">Contraseña</label>
                     <input type="password" name="password" placeholder="Ingresa tu contraseña" required>
                 </div>
+
                 <button type="submit" class="login-btn">Ingresar</button>
             </form>
             <div class="forgot-password">

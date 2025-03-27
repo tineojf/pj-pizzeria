@@ -37,7 +37,7 @@ label {
     color: #555;
     margin-bottom: 0.3rem;
 }
-input {
+input, select {
     width: 100%;
     padding: 0.7rem;
     border: 1px solid #ccc;
@@ -48,7 +48,7 @@ input {
     width: 100%;
     padding: 0.7rem;
     border: none;
-    background: #517090;
+    background: #FFBB33;
     color: white;
     border-radius: 5px;
     font-size: 1rem;
@@ -56,7 +56,7 @@ input {
     transition: background 0.3s;
 }
 .login-btn:hover {
-    background: #2E4052;
+    background: #CC8800;
 }
 .forgot-password {
     margin-top: 1rem;
