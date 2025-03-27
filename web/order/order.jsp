@@ -19,10 +19,10 @@
         <div class="login-container">
             <img src="<%= path%>/assets/images/logo.jpg" alt="Logo">
             <h2>Zona de Pedidos</h2>
-            <form action="<%= path%>/Order" method="GET">
+            <form action="<%= path%>/Order" method="POST">
                 <div class="input-group">
-                    <label for="customer">Cliente</label>
-                    <input type="text" id="customer" name="customer" 
+                    <label for="customerName">Cliente</label>
+                    <input type="text" id="customerName" name="customerName" 
                            placeholder="Nombre del cliente" required>
                 </div>
 

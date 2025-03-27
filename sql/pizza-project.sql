@@ -92,7 +92,7 @@ INSERT INTO customer (dni, full_name) VALUES
 ('11223344', 'Carlos López');
 
 INSERT INTO user (username, password) VALUES
-('admin', 'admin123'), 
+('admin', '123'), 
 ('empleado1', 'pass123'), 
 ('empleado2', 'secure456');
 

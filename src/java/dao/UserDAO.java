@@ -18,13 +18,13 @@ public class UserDAO {
         try (PreparedStatement statement = connection.prepareStatement(query)) {
             statement.setString(1, userModel.getUsername());
             statement.setString(2, userModel.getPassword());
-            System.out.println(query);
             ResultSet result = statement.executeQuery();
-
             return result.next();
         } catch (SQLException e) {
             System.out.println("GET error: " + e.getMessage());
             return false;
+        } finally {
+            DBConnector.closeConnection();
         }
     }
 }

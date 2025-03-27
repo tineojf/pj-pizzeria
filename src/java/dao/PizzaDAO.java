@@ -30,6 +30,8 @@ public class PizzaDAO {
         } catch (SQLException e) {
             System.out.println("GET error: " + e.getMessage());
             return null;
+        } finally {
+            DBConnector.closeConnection();
         }
     }
 }

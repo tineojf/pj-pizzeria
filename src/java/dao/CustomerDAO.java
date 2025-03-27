@@ -10,13 +10,13 @@ import model.CustomerModel;
 
 public class CustomerDAO {
 
-    public static int findByDNI(int dni) throws SQLException {
+    public static int findByDNI(String dni) throws SQLException {
         Connection connection = DBConnector.getConnection();
 
-        String query = "SELECT customer_id FROM customer WHERE customer_id = ?";
+        String query = "SELECT customer_id FROM customer WHERE dni = ?";
 
         try (PreparedStatement statement = connection.prepareStatement(query)) {
-            statement.setInt(1, dni);
+            statement.setString(1, dni);
             ResultSet result = statement.executeQuery();
 
             if (result.next()) {
@@ -47,6 +47,8 @@ public class CustomerDAO {
             }
         } catch (SQLException e) {
             System.err.println("POST error: " + e.getMessage());
+        } finally {
+            DBConnector.closeConnection();
         }
     }
 
