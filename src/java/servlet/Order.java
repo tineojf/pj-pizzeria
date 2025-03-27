@@ -56,9 +56,10 @@ public class Order extends HttpServlet {
             System.out.println("GET error: " + ex.getMessage());
         }
 
-        System.out.println(userFound);
-
         // create order
+        String pizza = request.getParameter("pizza");
+        String quantity = request.getParameter("quantity");
+
         // create ticket
     }
 
