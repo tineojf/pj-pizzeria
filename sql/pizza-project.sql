@@ -86,3 +86,33 @@ CREATE TABLE IF NOT EXISTS `serie` (
   PRIMARY KEY (`serie_id`),
   UNIQUE INDEX `name_UNIQUE` (`name` ASC) VISIBLE);
 
+-- DATA
+INSERT INTO customer (dni, name, last_name) VALUES
+('12345678', 'Juan', 'Pérez'),
+('87654321', 'María', 'Gómez'),
+('11223344', 'Carlos', 'López');
+
+INSERT INTO user (username, password) VALUES
+('admin', 'admin123'), 
+('empleado1', 'pass123'), 
+('empleado2', 'secure456');
+
+INSERT INTO pizza (name, price) VALUES
+('Americana', 25.00),
+('Hawaiana', 27.50),
+('Pepperoni', 30.00);
+
+INSERT INTO `order` (quantity, total, state, customer_customer_id, pizza_pizza_id) VALUES
+(2, 50.00, 1, 1, 1),
+(1, 27.50, 0, 2, 2),
+(3, 90.00, 1, 3, 3);
+
+INSERT INTO ticket (serie, order_order_id) VALUES
+('A001', 1),
+('A002', 2),
+('A003', 3);
+
+INSERT INTO serie (name, quantity) VALUES
+('A', 100),
+('B', 50),
+('C', 30);

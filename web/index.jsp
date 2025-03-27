@@ -1,5 +1,7 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <% String path = request.getContextPath();%>
+<% String userFound = request.getParameter("user");%>
+
 
 <!DOCTYPE html>
 <html lang="es">
@@ -8,6 +10,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Inicio de Sesión</title>
         <link rel="stylesheet" href="<%= path%>/assets/css/login.css">
+
+        <% if (userFound != null && userFound.equals("0")) {%>
+        <script>alert("Usuario o contraseña incorrecta")</script>
+        <% }%>
     </head>
     <body>
         <div class="login-container">

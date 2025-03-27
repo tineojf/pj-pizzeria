@@ -1,12 +1,15 @@
 package servlet;
 
+import dao.UserDAO;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.SQLException;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import model.UserModel;
 
 @WebServlet(name = "Login", urlPatterns = {"/Login"})
 public class Login extends HttpServlet {
@@ -39,9 +42,25 @@ public class Login extends HttpServlet {
         String username = request.getParameter("username");
         String password = request.getParameter("password");
 
-        // todo Check DB
-        System.out.println("USERNAME: " + username);
-        System.out.println("PASSWORD: " + password);
+        if (username == null && password == null) {
+            return;
+        }
+
+        UserModel user = new UserModel(username, password);
+
+        try {
+            boolean userFound = UserDAO.findUser(user);
+
+            if (userFound) {
+                response.sendRedirect("order/order.jsp");
+            } else {
+                response.sendRedirect("index.jsp?user=0");
+            }
+
+        } catch (SQLException ex) {
+            System.out.println("GET error: " + ex.getMessage());
+        }
+
     }
 
     @Override
