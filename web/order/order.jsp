@@ -33,10 +33,10 @@
                 </div>
 
                 <div class="input-group">
-                    <label for="pizza">Pizza</label>
-                    <select id="pizza" name="pizza">
+                    <label for="pizzaAndPrice">Pizza</label>
+                    <select id="pizzaAndPrice" name="pizzaAndPrice">
                         <% for (PizzaModel pizza : listDB) {%>
-                        <option value="<%=pizza.getPizzaID()%>">
+                        <option value="<%= pizza.getPizzaID()%>&<%= pizza.getPrice()%>">
                             <%= pizza.getName()%> - $<%= pizza.getPrice()%>
                         </option>
                         <% }%>

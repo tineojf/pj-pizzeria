@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import model.CustomerModel;
+import model.OrderModel;
 
 @WebServlet(name = "Order", urlPatterns = {"/Order"})
 public class Order extends HttpServlet {
@@ -39,10 +40,13 @@ public class Order extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        // foreign key
+        int userFound = -2;
+        int orderID = -1;
+
         // verify & create customer
         String customer = request.getParameter("customerName");
         String dni = request.getParameter("dni");
-        int userFound = -2;
 
         try {
             userFound = CustomerDAO.findByDNI(dni);
@@ -57,9 +61,13 @@ public class Order extends HttpServlet {
         }
 
         // create order
-        String pizza = request.getParameter("pizza");
-        String quantity = request.getParameter("quantity");
+        String[] pizzaAndPrice = request.getParameter("pizzaAndPrice").split("&");
+        int pizzaID = Integer.parseInt(pizzaAndPrice[0]);
+        Double price = Double.valueOf(pizzaAndPrice[1]);
+        int quantity = Integer.parseInt(request.getParameter("quantity"));
+        double total = price * quantity;
 
+        OrderModel newOrder = new OrderModel(quantity, total, 0, userFound, pizzaID);
         // create ticket
     }
 
