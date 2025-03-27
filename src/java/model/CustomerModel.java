@@ -4,20 +4,17 @@ public class CustomerModel {
 
     private int customerID;
     private String dni;
-    private String name;
-    private String lastName;
+    private String fullName;
 
-    public CustomerModel(int customerID, String dni, String name, String lastName) {
+    public CustomerModel(int customerID, String dni, String fullName) {
         this.customerID = customerID;
         this.dni = dni;
-        this.name = name;
-        this.lastName = lastName;
+        this.fullName = fullName;
     }
 
-    public CustomerModel(String dni, String name, String lastName) {
+    public CustomerModel(String dni, String fullName) {
         this.dni = dni;
-        this.name = name;
-        this.lastName = lastName;
+        this.fullName = fullName;
     }
 
     public int getCustomerID() {
@@ -36,25 +33,17 @@ public class CustomerModel {
         this.dni = dni;
     }
 
-    public String getName() {
-        return name;
+    public String getFullName() {
+        return fullName;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
     }
 
     @Override
     public String toString() {
-        return "CustomerModel{" + "customerID=" + customerID + ", dni=" + dni + ", name=" + name + ", lastName=" + lastName + '}';
+        return "CustomerModel{" + "customerID=" + customerID + ", dni=" + dni + ", fullName=" + fullName + '}';
     }
 
 }

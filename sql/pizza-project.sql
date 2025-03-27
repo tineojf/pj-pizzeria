@@ -5,8 +5,7 @@
 CREATE TABLE IF NOT EXISTS `customer` (
   `customer_id` INT NOT NULL AUTO_INCREMENT,
   `dni` VARCHAR(10) NOT NULL,
-  `name` VARCHAR(100) NOT NULL,
-  `last_name` VARCHAR(255) NOT NULL,
+  `full_name` VARCHAR(100) NOT NULL,
   PRIMARY KEY (`customer_id`),
   UNIQUE INDEX `dni_UNIQUE` (`dni` ASC) VISIBLE);
 
@@ -87,10 +86,10 @@ CREATE TABLE IF NOT EXISTS `serie` (
   UNIQUE INDEX `name_UNIQUE` (`name` ASC) VISIBLE);
 
 -- DATA
-INSERT INTO customer (dni, name, last_name) VALUES
-('12345678', 'Juan', 'Pérez'),
-('87654321', 'María', 'Gómez'),
-('11223344', 'Carlos', 'López');
+INSERT INTO customer (dni, full_name) VALUES
+('12345678', 'Juan Pérez'),
+('87654321', 'María Gómez'),
+('11223344', 'Carlos López');
 
 INSERT INTO user (username, password) VALUES
 ('admin', 'admin123'), 
