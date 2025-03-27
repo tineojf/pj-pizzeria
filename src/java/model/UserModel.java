@@ -12,6 +12,11 @@ public class UserModel {
         this.password = password;
     }
 
+    public UserModel(String username, String password) {
+        this.username = username;
+        this.password = password;
+    }
+
     public int getUserID() {
         return userID;
     }
