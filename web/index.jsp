@@ -9,6 +9,6 @@
     </head>
     <body>
         <div>Home</div>
-        <a href="<%=path%>/login/login.jsp">Login</a>
+        <a href="<%=path%>/login.jsp">Login</a>
     </body>
 </html>
