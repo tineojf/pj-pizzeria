@@ -55,6 +55,9 @@
         <button class="close-btn">
             <a href="<%= path%>/cash-registrer/close-registrer.jsp">Cierre Caja</a>
         </button>
+        <button class="close-btn">
+            <a href="<%= path%>/kitchen/kitchen.jsp">Cocina</a>
+        </button>
     </div>
 </body>
 </html>

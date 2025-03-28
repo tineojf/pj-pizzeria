@@ -17,6 +17,7 @@
     </head>
     <div class="caja-container">
         <h2>COCINA</h2>
+
         <table>
             <thead>
                 <tr>
@@ -44,8 +45,13 @@
                 <% }%>
             </tbody>
         </table>
+
         <button class="close-btn">
             <a href="<%= path%>/kitchen/attended.jsp">Atendidos</a>
+        </button>
+        
+        <button class="close-btn">
+            <a href="<%= path%>/cash-registrer/cash-registrer.jsp">Regresar</a>
         </button>
     </div>
 </body>

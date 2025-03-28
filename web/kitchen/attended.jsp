@@ -17,6 +17,7 @@
     </head>
     <div class="caja-container">
         <h2>COCINA ATENDIDA</h2>
+
         <table>
             <thead>
                 <tr>
@@ -33,8 +34,13 @@
                 <% }%>
             </tbody>
         </table>
+
         <button class="close-btn">
-            <a href="<%= path%>/kitchen/attended.jsp">Atendidos</a>
+            <a href="<%= path%>/kitchen/attended.jsp">Cerrar</a>
+        </button>
+
+        <button class="close-btn">
+            <a href="<%= path%>/kitchen/kitchen.jsp">Regresar</a>
         </button>
     </div>
 </body>
