@@ -38,7 +38,6 @@ td form {
     margin: 2px;
 }
 th {
-    background-color: #476A6F;
     color: white;
 }
 .btn {
@@ -87,4 +86,18 @@ th {
 .frm-btn {
     display: inline;
     margin: 2px;
+}
+
+.bck-registrer {
+    background-color: #2D936C;
+}
+
+.bck-kitchen {
+    background-color: #FF9505;
+}
+.bck-attended {
+    background-color: #592E83;
+}
+.bck-ticket {
+    background-color: #220C10;
 }

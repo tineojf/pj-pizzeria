@@ -19,7 +19,7 @@
         <h2>CAJA</h2>
         <table>
             <thead>
-                <tr>
+                <tr class="bck-registrer">
                     <th>#</th>
                     <th>Cliente</th>
                     <th>Pizza</th>

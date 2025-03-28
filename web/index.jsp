@@ -31,9 +31,6 @@
 
                 <button type="submit" class="login-btn">Ingresar</button>
             </form>
-            <div class="forgot-password">
-                <a href="#">¿Olvidaste tu contraseña?</a>
-            </div>
         </div>
     </body>
 </html>

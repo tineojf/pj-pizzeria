@@ -20,7 +20,7 @@
 
         <table>
             <thead>
-                <tr>
+                <tr class="bck-kitchen">
                     <th>#</th>
                     <th>Cliente</th>
                     <th>Pizza</th>

@@ -17,10 +17,10 @@
         <link rel="stylesheet" href="<%= path%>/assets/css/cash-registrer.css">
     </head>
     <div class="caja-container">
-        <h2>Boletas y Facturas</h2>
+        <h2>BOLETAS Y FACTURAS</h2>
         <table>
             <thead>
-                <tr>
+                <tr class="bck-ticket">
                     <th>#</th>
                     <th>Cliente</th>
                     <th>Pizza</th>

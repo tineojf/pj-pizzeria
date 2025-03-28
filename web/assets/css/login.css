@@ -48,7 +48,7 @@ input {
     width: 100%;
     padding: 0.7rem;
     border: none;
-    background: #517090;
+    background: #3185FC;
     color: white;
     border-radius: 5px;
     font-size: 1rem;
@@ -56,16 +56,5 @@ input {
     transition: background 0.3s;
 }
 .login-btn:hover {
-    background: #2E4052;
-}
-.forgot-password {
-    margin-top: 1rem;
-    font-size: 0.9rem;
-}
-.forgot-password a {
-    color: #007bff;
-    text-decoration: none;
-}
-.forgot-password a:hover {
-    text-decoration: underline;
+    background: #0244A1;
 }

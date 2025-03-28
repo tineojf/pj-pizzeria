@@ -21,7 +21,7 @@
 
         <table>
             <thead>
-                <tr>
+                <tr class="bck-attended">
                     <th>Pizza</th>
                     <th>Cantidad</th>
                 </tr>
