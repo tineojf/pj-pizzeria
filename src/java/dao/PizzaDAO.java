@@ -6,7 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import java.util.ArrayList;
-import model.PizzaDTO;
+import dto.PizzaDTO;
 import model.PizzaModel;
 
 public class PizzaDAO {

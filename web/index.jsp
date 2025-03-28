@@ -2,7 +2,6 @@
 <% String path = request.getContextPath();%>
 <% String userFound = request.getParameter("user");%>
 
-
 <!DOCTYPE html>
 <html lang="es">
     <head>

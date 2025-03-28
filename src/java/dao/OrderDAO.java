@@ -1,6 +1,6 @@
 package dao;
 
-import model.OrderDTO;
+import dto.OrderDTO;
 import db.DBConnector;
 
 import java.sql.Connection;

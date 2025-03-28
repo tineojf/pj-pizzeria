@@ -1,5 +1,5 @@
 <%@page import="java.util.ArrayList"%>
-<%@page import="model.PizzaDTO"%>
+<%@page import="dto.PizzaDTO"%>
 <%@page import="dao.PizzaDAO"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%
