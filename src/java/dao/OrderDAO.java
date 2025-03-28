@@ -81,8 +81,8 @@ public class OrderDAO {
             System.err.println("UPDATE - Error: " + e.getMessage());
         }
     }
-    
-        public static void updateAllState() throws SQLException {
+
+    public static void updateAllState() throws SQLException {
         Connection connection = DBConnector.getConnection();
 
         String query = "UPDATE `order` SET state = 3 WHERE state = 2";

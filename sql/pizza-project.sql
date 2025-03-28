@@ -82,7 +82,7 @@ INSERT INTO customer (dni, full_name) VALUES
 ('11223344', 'Carlos López');
 
 INSERT INTO user (username, password) VALUES
-('admin', 'admin123'), 
+('admin', '123'), 
 ('empleado1', 'pass123'), 
 ('empleado2', 'secure456');
 
@@ -99,9 +99,3 @@ INSERT INTO `order` (quantity, total, state, customer_id, pizza_id) VALUES
 (2, 50.00, 1, 1, 1),
 (1, 27.50, 0, 2, 2),
 (3, 90.00, 1, 3, 3);
-
-INSERT INTO ticket (serie, order_id) VALUES
-('B001-00010', 1),
-('F001-00005', 2),
-('B001-00011', 3);
-
