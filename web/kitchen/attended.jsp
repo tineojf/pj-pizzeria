@@ -35,9 +35,9 @@
             </tbody>
         </table>
 
-        <button class="close-btn">
-            <a href="<%= path%>/kitchen/attended.jsp">Cerrar</a>
-        </button>
+        <form action="<%= path%>/Close" method="POST">
+            <button class="close-btn" type="submit">Cerrar</button>
+        </form>
 
         <button class="close-btn">
             <a href="<%= path%>/kitchen/kitchen.jsp">Regresar</a>
