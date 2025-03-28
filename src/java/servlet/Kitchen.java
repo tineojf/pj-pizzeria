@@ -2,13 +2,16 @@ package servlet;
 
 import dao.OrderDAO;
 import dao.SerieDAO;
+import dao.TicketDAO;
 import java.io.IOException;
 import java.sql.SQLException;
+import java.time.LocalDateTime;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import model.TicketModel;
 
 @WebServlet(name = "Kitchen", urlPatterns = {"/Kitchen"})
 public class Kitchen extends HttpServlet {
@@ -53,8 +56,13 @@ public class Kitchen extends HttpServlet {
         String serie = ticketType + "-" + String.format("%05d", serieQuantity);
 
         // create ticket
-        
-        
+        TicketModel newTicket = new TicketModel(serie, LocalDateTime.now(), orderID);
+        try {
+            TicketDAO.create(newTicket);
+        } catch (SQLException ex) {
+            System.err.println("POST - Error: " + ex.getMessage());
+        }
+
         // final redirect
         response.sendRedirect("kitchen/kitchen.jsp");
 
