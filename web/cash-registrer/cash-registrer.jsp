@@ -1,5 +1,5 @@
 <%@page import="java.util.ArrayList"%>
-<%@page import="dao.OrderDTO"%>
+<%@page import="model.OrderDTO"%>
 <%@page import="dao.OrderDAO"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%
