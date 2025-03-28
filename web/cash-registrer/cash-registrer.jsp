@@ -39,7 +39,13 @@
                     <td>
                         <form action="<%= path%>/Kitchen" method="POST">
                             <input type="hidden" name="orderID" value="<%= order.getOrderID()%>">
-                            <button type="submit" class="btn">Pagar</button>
+                            <input type="hidden" name="tickerType" value="boleta">
+                            <button type="submit" class="btn double-btn">Boleta</button>
+                        </form>
+                        <form action="<%= path%>/Kitchen" method="POST">
+                            <input type="hidden" name="orderID" value="<%= order.getOrderID()%>">
+                            <input type="hidden" name="tickerType" value="Factura">
+                            <button type="submit" class="btn double-btn">Factura</button>
                         </form>
                     </td>
                 </tr>

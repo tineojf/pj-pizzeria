@@ -33,6 +33,10 @@ th, td {
     padding: 10px;
     text-align: center;
 }
+td form {
+    display: inline-block;
+    margin: 2px;
+}
 th {
     background-color: #476A6F;
     color: white;
@@ -50,8 +54,16 @@ th {
 .btn:hover {
     background-color: #CC8800;
 }
+.double-btn {
+    padding: 6px 12px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    width: 80px;
+}
+
 .btn-attended{
     background-color: #00CC25;
+    font-size: 0.9rem;
 }
 .close-btn {
     width: 20%;

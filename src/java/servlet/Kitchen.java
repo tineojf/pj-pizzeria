@@ -26,10 +26,18 @@ public class Kitchen extends HttpServlet {
 
         try {
             OrderDAO.update(orderID);
-            response.sendRedirect("kitchen/kitchen.jsp");
         } catch (SQLException ex) {
             System.err.println("UPDATE - Error: " + ex.getMessage());
         }
+
+        // find ticket type
+        String ticketType = request.getParameter("ticketType");
+        
+        // create ticket
+
+        // final redirect
+        response.sendRedirect("kitchen/kitchen.jsp");
+
     }
 
     @Override
