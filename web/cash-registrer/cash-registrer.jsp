@@ -4,7 +4,7 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%
     String path = request.getContextPath();
-    ArrayList<OrderDTO> listDB = OrderDAO.findAll();
+    ArrayList<OrderDTO> listDB = OrderDAO.findAllByState(0);
 %>
 
 <!DOCTYPE html>

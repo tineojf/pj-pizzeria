@@ -33,7 +33,7 @@ public class OrderDAO {
         }
     }
 
-    public static ArrayList<OrderDTO> findAll() throws SQLException {
+    public static ArrayList<OrderDTO> findAllByState(int state) throws SQLException {
         Connection connection = DBConnector.getConnection();
 
         ArrayList<OrderDTO> listDB = new ArrayList<>();
@@ -41,7 +41,7 @@ public class OrderDAO {
                 + "FROM `order` o "
                 + "JOIN customer c ON o.customer_id = c.customer_id "
                 + "JOIN pizza p ON p.pizza_id = o.pizza_id "
-                + "WHERE o.state = 0;";
+                + "WHERE o.state = " + state + ";";
 
         try {
             ResultSet result = connection.createStatement().executeQuery(query);
