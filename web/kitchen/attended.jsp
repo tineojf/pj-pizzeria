@@ -5,6 +5,7 @@
 <%
     String path = request.getContextPath();
     ArrayList<PizzaDTO> listDB = PizzaDAO.findQuantityPizza(2);
+    int suma = 0;
 %>
 
 <!DOCTYPE html>
@@ -30,12 +31,20 @@
                 <tr>
                     <td><%= pizza.getName()%></td>
                     <td><%= pizza.getQuantity()%></td>
+                    <% suma += pizza.getQuantity(); %>
+                </tr>
+                <% }%>
+
+                <% if (suma != 0) {%>
+                <tr>
+                    <td><strong>Total</strong></td>
+                    <td><%= suma%></td>
                 </tr>
                 <% }%>
             </tbody>
         </table>
 
-        <form action="<%= path%>/Close" method="POST">
+        <form action="<%= path%>/Close" method="POST" class="frm-btn">
             <button class="close-btn" type="submit">Cerrar</button>
         </form>
 

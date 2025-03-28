@@ -84,3 +84,7 @@ th {
     text-decoration: none;
     color: white;
 }
+.frm-btn {
+    display: inline;
+    margin: 2px;
+}
