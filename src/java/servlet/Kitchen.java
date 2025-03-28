@@ -1,6 +1,8 @@
 package servlet;
 
+import dao.OrderDAO;
 import java.io.IOException;
+import java.sql.SQLException;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -21,8 +23,13 @@ public class Kitchen extends HttpServlet {
             throws ServletException, IOException {
         // update state
         int orderID = Integer.parseInt(request.getParameter("orderID"));
-        
-        // redirect to kitchen
+
+        try {
+            OrderDAO.update(orderID);
+            response.sendRedirect("kitchen/kitchen.jsp");
+        } catch (SQLException ex) {
+            System.err.println("UPDATE - Error: " + ex.getMessage());
+        }
     }
 
     @Override

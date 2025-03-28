@@ -65,4 +65,20 @@ public class OrderDAO {
         }
     }
 
+    public static void update(int id) throws SQLException {
+        Connection connection = DBConnector.getConnection();
+
+        String query = "UPDATE `order` SET state = ? WHERE order_id = ?";
+        try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
+            preparedStatement.setInt(1, 1);
+            preparedStatement.setInt(2, id);
+
+            int rowsUpdated = preparedStatement.executeUpdate();
+            if (rowsUpdated > 0) {
+                System.out.println("UPDATE - UPDATED ");
+            }
+        } catch (SQLException e) {
+            System.err.println("UPDATE - Error: " + e.getMessage());
+        }
+    }
 }
