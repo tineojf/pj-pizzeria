@@ -29,7 +29,7 @@ public class Kitchen extends HttpServlet {
         int orderID = Integer.parseInt(request.getParameter("orderID"));
 
         try {
-            OrderDAO.update(orderID);
+            OrderDAO.updateState(orderID, 1);
         } catch (SQLException ex) {
             System.err.println("UPDATE - Error: " + ex.getMessage());
         }
