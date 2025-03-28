@@ -13,7 +13,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Zona Caja</title>
-        <link rel="stylesheet" href="<%= path%>/assets/css/cash-registrer.css">
+        <link rel="stylesheet" href="<%= path%>/assets/css/styles.css">
     </head>
     <div class="caja-container">
         <h2>CAJA</h2>
