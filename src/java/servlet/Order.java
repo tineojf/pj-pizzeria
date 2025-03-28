@@ -63,11 +63,12 @@ public class Order extends HttpServlet {
         // create order
         String[] pizzaAndPrice = request.getParameter("pizzaAndPrice").split("&");
         int pizzaID = Integer.parseInt(pizzaAndPrice[0]);
-        Double price = Double.valueOf(pizzaAndPrice[1]);
+        double price = Double.parseDouble(pizzaAndPrice[1]);
         int quantity = Integer.parseInt(request.getParameter("quantity"));
         double total = price * quantity;
 
         OrderModel newOrder = new OrderModel(quantity, total, 0, userFound, pizzaID);
+
         // create ticket
     }
 

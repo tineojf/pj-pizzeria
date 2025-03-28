@@ -13,15 +13,14 @@ public class OrderDAO {
         Connection connection = DBConnector.getConnection();
 
         String query = "INSERT INTO order "
-                + "(quantity, total, state, customer_id, pizza_id)"
-                + " VALUES (?, ?, ?, ?, ?)";
+                + "(quantity, total, customer_id, pizza_id)"
+                + " VALUES (?, ?, ?, ?)";
 
         try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
             preparedStatement.setInt(1, order.getOrderID());
             preparedStatement.setDouble(2, order.getTotal());
-            preparedStatement.setInt(3, order.getState());
-            preparedStatement.setInt(4, order.getCustomerID());
-            preparedStatement.setInt(5, order.getPizzaID());
+            preparedStatement.setInt(3, order.getCustomerID());
+            preparedStatement.setInt(4, order.getPizzaID());
 
             int rowsInserted = preparedStatement.executeUpdate();
             if (rowsInserted > 0) {
