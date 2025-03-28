@@ -47,7 +47,9 @@
                 <% }%>
             </tbody>
         </table>
-        <button class="close-btn">Cierre Caja</button>
+        <button class="close-btn">
+            <a href="<%= path%>/cash-registrer/close-registrer.jsp">Cierre Caja</a>
+        </button>
     </div>
 </body>
 </html>
