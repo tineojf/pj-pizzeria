@@ -37,11 +37,10 @@
                     <td><%= order.getQuantity()%></td>
                     <td><%= order.getTotal()%></td>
                     <td>
-                        <a 
-                            href="<%= path%>/kitchen/kitchen.jsp?orderID=<%= order.getOrderID()%>"
-                            class="btn">
-                            Pagar
-                        </a>
+                        <form action="<%= path%>/Kitchen" method="POST">
+                            <input type="hidden" name="orderID" value="<%= order.getOrderID()%>">
+                            <button type="submit" class="btn">Pagar</button>
+                        </form>
                     </td>
                 </tr>
                 <% }%>
