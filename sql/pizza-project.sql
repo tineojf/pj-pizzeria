@@ -92,9 +92,8 @@ INSERT INTO pizza (name, price) VALUES
 ('Pepperoni', 30.00);
 
 INSERT INTO serie (name, quantity) VALUES
-('A', 100),
-('B', 50),
-('C', 30);
+('B001', 10),
+('F001', 5);
 
 INSERT INTO `order` (quantity, total, state, customer_id, pizza_id) VALUES
 (2, 50.00, 1, 1, 1),
@@ -102,7 +101,7 @@ INSERT INTO `order` (quantity, total, state, customer_id, pizza_id) VALUES
 (3, 90.00, 1, 3, 3);
 
 INSERT INTO ticket (serie, order_id) VALUES
-('A001', 1),
-('A002', 2),
-('A003', 3);
+('B001-00010', 1),
+('F001-00005', 2),
+('B001-00011', 3);
 
