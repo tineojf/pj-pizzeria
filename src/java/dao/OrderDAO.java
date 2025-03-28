@@ -4,7 +4,9 @@ import db.DBConnector;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import model.OrderModel;
 
 public class OrderDAO {
@@ -27,6 +29,38 @@ public class OrderDAO {
         } catch (SQLException e) {
             System.err.println("POST error: " + e.getMessage());
             return false;
+        }
+    }
+
+    public static ArrayList<OrderDTO> findAll() throws SQLException {
+        Connection connection = DBConnector.getConnection();
+
+        ArrayList<OrderDTO> listDB = new ArrayList<>();
+        String query = "SELECT o.order_id, c.full_name, p.`name`, o.quantity, o.total "
+                + "FROM `order` o "
+                + "JOIN customer c ON o.customer_id = c.customer_id "
+                + "JOIN pizza p ON p.pizza_id = o.pizza_id "
+                + "WHERE o.state = 0;";
+
+        try {
+            ResultSet result = connection.createStatement().executeQuery(query);
+
+            while (result.next()) {
+                listDB.add(new OrderDTO(
+                        result.getInt("order_id"),
+                        result.getString("full_name"),
+                        result.getString("name"),
+                        result.getInt("quantity"),
+                        result.getDouble("total"))
+                );
+            }
+
+            return listDB;
+        } catch (SQLException e) {
+            System.out.println("GET error: " + e.getMessage());
+            return null;
+        } finally {
+            DBConnector.closeConnection();
         }
     }
 
