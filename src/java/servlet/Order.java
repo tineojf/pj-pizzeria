@@ -1,6 +1,7 @@
 package servlet;
 
 import dao.CustomerDAO;
+import dao.OrderDAO;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.SQLException;
@@ -42,7 +43,6 @@ public class Order extends HttpServlet {
             throws ServletException, IOException {
         // foreign key
         int userFound = -2;
-        int orderID = -1;
 
         // verify & create customer
         String customer = request.getParameter("customerName");
@@ -68,8 +68,12 @@ public class Order extends HttpServlet {
         double total = price * quantity;
 
         OrderModel newOrder = new OrderModel(quantity, total, 0, userFound, pizzaID);
-
-        // create ticket
+        try {
+            OrderDAO.create(newOrder);
+            response.sendRedirect("cash-registrer/cash-registrer.jsp");
+        } catch (SQLException ex) {
+            System.out.println("POST error: " + ex.getMessage());
+        }
     }
 
     @Override
