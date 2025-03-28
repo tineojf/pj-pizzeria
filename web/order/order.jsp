@@ -50,7 +50,7 @@
                            value="1" step="1" required>
                 </div>
 
-                <button type="submit" class="login-btn">Registrar pedido</button>
+                <button type="submit" class="order-btn">Registrar pedido</button>
             </form>
         </div>
     </body>

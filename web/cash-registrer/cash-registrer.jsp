@@ -17,6 +17,7 @@
     </head>
     <div class="caja-container">
         <h2>CAJA</h2>
+
         <table>
             <thead>
                 <tr class="bck-registrer">
@@ -40,23 +41,30 @@
                         <form action="<%= path%>/Kitchen" method="POST">
                             <input type="hidden" name="orderID" value="<%= order.getOrderID()%>">
                             <input type="hidden" name="ticketType" value="B001">
-                            <button type="submit" class="btn double-btn">Boleta</button>
+                            <button type="submit" class="btn double-btn bck-ticket">Boleta</button>
                         </form>
                         <form action="<%= path%>/Kitchen" method="POST">
                             <input type="hidden" name="orderID" value="<%= order.getOrderID()%>">
                             <input type="hidden" name="ticketType" value="F001">
-                            <button type="submit" class="btn double-btn">Factura</button>
+                            <button type="submit" class="btn double-btn bck-ticket">Factura</button>
                         </form>
                     </td>
                 </tr>
                 <% }%>
             </tbody>
         </table>
-        <button class="close-btn">
-            <a href="<%= path%>/cash-registrer/close-registrer.jsp">Cierre Caja</a>
+
+        <button class="bar-btn bck-order">
+            <a href="<%= path%>/order/order.jsp">Pedido</a>
         </button>
-        <button class="close-btn">
+        <button class="bar-btn bck-kitchen">
             <a href="<%= path%>/kitchen/kitchen.jsp">Cocina</a>
+        </button>
+        <button class="bar-btn bck-attended">
+            <a href="<%= path%>/kitchen/attended.jsp">Atendidos</a>
+        </button>
+        <button class="bar-btn bck-ticket">
+            <a href="<%= path%>/cash-registrer/ticket.jsp">Comprobantes</a>
         </button>
     </div>
 </body>

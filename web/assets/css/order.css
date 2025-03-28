@@ -44,7 +44,7 @@ input, select {
     border-radius: 5px;
     font-size: 1rem;
 }
-.login-btn {
+.order-btn {
     width: 100%;
     padding: 0.7rem;
     border: none;
@@ -55,17 +55,6 @@ input, select {
     cursor: pointer;
     transition: background 0.3s;
 }
-.login-btn:hover {
+.order-btn:hover {
     background: #CC8800;
-}
-.forgot-password {
-    margin-top: 1rem;
-    font-size: 0.9rem;
-}
-.forgot-password a {
-    color: #007bff;
-    text-decoration: none;
-}
-.forgot-password a:hover {
-    text-decoration: underline;
 }

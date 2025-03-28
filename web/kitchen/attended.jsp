@@ -44,13 +44,21 @@
             </tbody>
         </table>
 
-        <form action="<%= path%>/Close" method="POST" class="frm-btn">
-            <button class="close-btn" type="submit">Cerrar</button>
-        </form>
-
-        <button class="close-btn">
-            <a href="<%= path%>/kitchen/kitchen.jsp">Regresar</a>
+        <button class="bar-btn bck-order">
+            <a href="<%= path%>/order/order.jsp">Pedido</a>
         </button>
+        <button class="bar-btn bck-registrer">
+            <a href="<%= path%>/cash-registrer/cash-registrer.jsp">Caja</a>
+        </button>
+        <button class="bar-btn bck-kitchen">
+            <a href="<%= path%>/kitchen/kitchen.jsp">Cocina</a>
+        </button>
+        <button class="bar-btn bck-ticket">
+            <a href="<%= path%>/cash-registrer/ticket.jsp">Comprobantes</a>
+        </button>
+        <form action="<%= path%>/Close" method="POST" class="frm-btn">
+            <button class="bar-btn bck-close" type="submit">Cerrar</button>
+        </form>
     </div>
 </body>
 </html>

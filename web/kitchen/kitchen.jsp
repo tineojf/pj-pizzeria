@@ -38,7 +38,7 @@
                     <td>
                         <form action="<%= path%>/Attended" method="POST">
                             <input type="hidden" name="orderID" value="<%= order.getOrderID()%>">
-                            <button type="submit" class="btn btn-attended">Atender</button>
+                            <button type="submit" class="btn bck-attended double-btn">Atender</button>
                         </form>
                     </td>
                 </tr>
@@ -46,12 +46,17 @@
             </tbody>
         </table>
 
-        <button class="close-btn">
+        <button class="bar-btn bck-order">
+            <a href="<%= path%>/order/order.jsp">Pedido</a>
+        </button>
+        <button class="bar-btn bck-registrer">
+            <a href="<%= path%>/cash-registrer/cash-registrer.jsp">Caja</a>
+        </button>
+        <button class="bar-btn bck-attended">
             <a href="<%= path%>/kitchen/attended.jsp">Atendidos</a>
         </button>
-
-        <button class="close-btn">
-            <a href="<%= path%>/cash-registrer/cash-registrer.jsp">Regresar</a>
+        <button class="bar-btn bck-ticket">
+            <a href="<%= path%>/cash-registrer/ticket.jsp">Comprobantes</a>
         </button>
     </div>
 </body>

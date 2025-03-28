@@ -16,7 +16,7 @@ body {
     padding: 2rem;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    width: 800px;
+    width: 1000px;
     text-align: center;
 }
 h2 {
@@ -50,9 +50,6 @@ th {
     display: inline-block;
     transition: background 0.3s;
 }
-.btn:hover {
-    background-color: #CC8800;
-}
 .double-btn {
     padding: 6px 12px;
     cursor: pointer;
@@ -60,15 +57,14 @@ th {
     width: 80px;
 }
 
-.btn-attended{
+.btn-attended {
     background-color: #00CC25;
     font-size: 0.9rem;
 }
-.close-btn {
-    width: 20%;
+.bar-btn {
+    width: 15%;
     padding: 0.7rem;
     border: none;
-    background: #a93226;
     color: white;
     border-radius: 5px;
     font-size: 1rem;
@@ -76,10 +72,10 @@ th {
     margin-top: 1.5rem;
     transition: background 0.3s;
 }
-.close-btn:hover {
-    background: #710627;
+.bar-btn:hover {
+    background: #220C10;
 }
-.close-btn a {
+.bar-btn a {
     text-decoration: none;
     color: white;
 }
@@ -88,10 +84,12 @@ th {
     margin: 2px;
 }
 
+.bck-order {
+    background-color: #FFBB33;
+}
 .bck-registrer {
     background-color: #2D936C;
 }
-
 .bck-kitchen {
     background-color: #FF9505;
 }
@@ -100,4 +98,10 @@ th {
 }
 .bck-ticket {
     background-color: #220C10;
+}
+.bck-close {
+    background: #F40119;
+}
+div > .bck-ticket:hover, form > .bck-ticket:hover {
+    background-color: #973547;
 }

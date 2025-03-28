@@ -21,10 +21,10 @@
         <table>
             <thead>
                 <tr class="bck-ticket">
-                    <th>#</th>
+                    <th>Serie</th>
                     <th>Cliente</th>
-                    <th>Pizza</th>
-                    <th>Cant.</th>
+                    <th>DNI</th>
+                    <th>Fecha y Hora</th>
                     <th>Total</th>
                 </tr>
             </thead>
@@ -49,13 +49,19 @@
             </tbody>
         </table>
 
-        <form action="<%= path%>/Ticket" method="POST" class="frm-btn">
-            <button class="close-btn" type="submit">Cerrar</button>
-        </form>
 
-        <button class="close-btn">
-            <a href="<%= path%>/kitchen/kitchen.jsp">Regresar</a>
+        <button class="bar-btn bck-order">
+            <a href="<%= path%>/order/order.jsp">Pedido</a>
         </button>
+        <button class="bar-btn bck-kitchen">
+            <a href="<%= path%>/kitchen/kitchen.jsp">Cocina</a>
+        </button>
+        <button class="bar-btn bck-attended">
+            <a href="<%= path%>/kitchen/attended.jsp">Atendidos</a>
+        </button>
+        <form action="<%= path%>/Ticket" method="POST" class="frm-btn">
+            <button class="bar-btn bck-close"" type="submit">Cerrar</button>
+        </form>
     </div>
 </body>
 </html>
