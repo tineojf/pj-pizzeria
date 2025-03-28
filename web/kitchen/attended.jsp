@@ -25,10 +25,10 @@
                 </tr>
             </thead>
             <tbody>
-                <% for (PizzaDAO order : listDB) {%>
+                <% for (PizzaDTO pizza : listDB) {%>
                 <tr>
-                    <td><%= order.getPizza()%></td>
-                    <td><%= order.getQuantity()%></td>
+                    <td><%= pizza.getName()%></td>
+                    <td><%= pizza.getQuantity()%></td>
                 </tr>
                 <% }%>
             </tbody>

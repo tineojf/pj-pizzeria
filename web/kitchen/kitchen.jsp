@@ -35,7 +35,7 @@
                     <td><%= order.getPizza()%></td>
                     <td><%= order.getQuantity()%></td>
                     <td>
-                        <form action="<%= path%>/Ticket" method="POST">
+                        <form action="<%= path%>/Attended" method="POST">
                             <input type="hidden" name="orderID" value="<%= order.getOrderID()%>">
                             <button type="submit" class="btn btn-attended">Atender</button>
                         </form>

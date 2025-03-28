@@ -43,7 +43,7 @@ public class PizzaDAO {
         String query = "SELECT p.`name`, count(p.`name`) as quantity "
                 + "FROM `order` o "
                 + "JOIN pizza p ON p.pizza_id = o.pizza_id "
-                + "WHERE o.state = 1"
+                + "WHERE o.state = " + state + " "
                 + "GROUP BY p.`name`;";
 
         try {
