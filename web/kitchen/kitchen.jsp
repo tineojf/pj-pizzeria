@@ -49,7 +49,7 @@
         <button class="close-btn">
             <a href="<%= path%>/kitchen/attended.jsp">Atendidos</a>
         </button>
-        
+
         <button class="close-btn">
             <a href="<%= path%>/cash-registrer/cash-registrer.jsp">Regresar</a>
         </button>
