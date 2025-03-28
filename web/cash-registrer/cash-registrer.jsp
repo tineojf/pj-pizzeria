@@ -1,7 +1,10 @@
+<%@page import="java.util.ArrayList"%>
+<%@page import="dao.OrderDTO"%>
+<%@page import="dao.OrderDAO"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%
     String path = request.getContextPath();
-    // load order state = 0
+    ArrayList<OrderDTO> listDB = OrderDAO.findAll();
 %>
 
 <!DOCTYPE html>
@@ -26,30 +29,22 @@
                 </tr>
             </thead>
             <tbody>
+                <% for (OrderDTO order : listDB) {%>
                 <tr>
-                    <td>1</td>
-                    <td>Juanito</td>
-                    <td>Americana</td>
-                    <td>2</td>
-                    <td>$ 50</td>
-                    <td><a href="#" class="btn">Pagar</a></td>
+                    <td><%= order.getOrderID()%></td>
+                    <td><%= order.getCustomer()%></td>
+                    <td><%= order.getPizza()%></td>
+                    <td><%= order.getQuantity()%></td>
+                    <td><%= order.getTotal()%></td>
+                    <td>
+                        <a 
+                            href="<%= path%>/kitchen/kitchen.jsp?orderID=<%= order.getOrderID()%>"
+                            class="btn">
+                            Pagar
+                        </a>
+                    </td>
                 </tr>
-                <tr>
-                    <td>2</td>
-                    <td>María</td>
-                    <td>Jamón</td>
-                    <td>1</td>
-                    <td>$ 30</td>
-                    <td><a href="#" class="btn">Pagar</a></td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>Teresa</td>
-                    <td>Luisa</td>
-                    <td>3</td>
-                    <td>$ 60</td>
-                    <td><a href="#" class="btn">Pagar</a></td>
-                </tr>
+                <% }%>
             </tbody>
         </table>
         <button class="close-btn">Cierre Caja</button>
