@@ -17,8 +17,9 @@
     </head>
     <body>
         <div class="login-container">
-            <img src="<%= path%>/assets/images/logo.jpg" alt="Logo">
+            <img src="<%= path%>/assets/images/logo.jpg" alt="Logo">            
             <h2>Zona de Pedidos</h2>
+
             <form action="<%= path%>/Order" method="POST">
                 <div class="input-group">
                     <label for="customerName">Cliente</label>
