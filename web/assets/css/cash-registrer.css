@@ -50,6 +50,9 @@ th {
 .btn:hover {
     background-color: #CC8800;
 }
+.btn-attended{
+    background-color: #00CC25;
+}
 .close-btn {
     width: 20%;
     padding: 0.7rem;
